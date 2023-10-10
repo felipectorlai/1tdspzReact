@@ -1,4 +1,4 @@
-export default ()=>{
+function ListaCarros (){
     return(
         <>
         <h1>Lista Carros</h1>
@@ -6,3 +6,4 @@ export default ()=>{
         </>
     )
 }
+export default ListaCarros;
