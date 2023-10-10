@@ -1,24 +1,19 @@
-import Componente01 from './Componentes/Componente01'
-import Componente02 from './Componentes/Componente02'
-import Componente03 from './Componentes/Componente03'
-function App (){
-  let linguagem="JAVASCRIPTs";
+//biblioteca de roteamento
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/home'
+import ListaCarros from './pages/listaCarros'
+import Sobre from './pages/sobre'
 
-  function clicouBotao(){
-    alert("alerta da tela app");
-  }
+export default () => {
   return (
-          <>
-          <h1>OLÁ MUNDO !!!</h1>
-          <hr />
-          <Componente01 />
-          <hr />
-          <Componente02 />
-          <hr />
-          <Componente03 textoPai={linguagem} clicouPai={clicouBotao}/>
-          <hr />
-
-          </>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/listacarros' element={<ListaCarros/>}/>
+          <Route path='/sobre' element={<Sobre/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
-export default App;
